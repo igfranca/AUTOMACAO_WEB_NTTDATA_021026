@@ -1,3 +1,5 @@
+package testecomcucumber;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -10,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
-public class TestBase {
+public class TestBaseCucumber {
 
   private static WebDriver driver;
 
@@ -44,6 +46,12 @@ public class TestBase {
 
     String valorDoProdutoCarrinho = driver.findElement(By.xpath("//*[@id='resumeValues']/div[2]/div[2]/div[2]/div")).getText();
     System.out.println("Valor do produto no carrinho: " + valorDoProdutoCarrinho);
+
+    if (valorDoProdutoScacola.equalsIgnoreCase(valorDoProdutoCarrinho)) {
+      System.out.println("O valor do produto na sacola é igual ao valor do produto no carrinho.");
+    } else {
+      System.out.println("O valor do produto na sacola é diferente do valor do produto no carrinho.");
+    }
   }
 
   @AfterClass
