@@ -1,4 +1,4 @@
-package testecomcucumber;
+package web.parte1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
-public class TestBaseCucumber {
+public class TestBase {
 
   private static WebDriver driver;
 
